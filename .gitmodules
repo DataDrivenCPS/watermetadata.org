@@ -1,3 +1,6 @@
 [submodule "water-ontology"]
 	path = water-ontology
 	url = https://github.com/DataDrivenCPS/water-ontology.git
+[submodule "watr-ontology-browser"]
+	path = watr-ontology-browser
+	url = https://github.com/DataDrivenCPS/watr-ontology-browser.git
