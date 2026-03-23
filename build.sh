@@ -29,7 +29,7 @@ uv sync --project water-ontology
 
 # generate template library documentation (sphinx-autodoc-bmotif v0.2.0)
 ROOTDIR=$(pwd)
-uv run --project water-ontology python -m sphinx_autodoc_bmotif generate \
+uv run --project water-ontology --with sphinx-autodoc-bmotif sphinx-autodoc-bmotif generate \
     "${ROOTDIR}/water-ontology/libraries/templates" \
     "${ROOTDIR}/_staging/water-ontology/libraries"
 
