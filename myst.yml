@@ -1,0 +1,34 @@
+version: 1
+
+project:
+  title: Water Treatment Ontology Documentation
+  github: https://github.com/DataDrivenCPS/water-ontology
+
+  toc:
+    - file: README.md
+    - title: Explanation
+      children:
+        - file: explanation/purpose_scope.md
+        - file: explanation/overview.md
+        - file: explanation/definitions.md
+        - file: explanation/processes.md
+        - file: explanation/flow_graph_sensor.md
+    - title: Tutorials
+      children:
+        - file: tutorials/creating-models.md
+        - file: tutorials/data-quality-tutorial.md
+    - title: Guides
+      children:
+        - file: guides/todo.md
+    - title: Reference
+      children:
+        - file: reference/equipment_documentation.md
+        - file: reference/substances_documentation.md
+        - title: Template Libraries
+          children:
+            - pattern: libraries/templates/*.md
+
+site:
+  title: Water Treatment Ontology Documentation
+  options:
+    favicon: null
