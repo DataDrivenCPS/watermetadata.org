@@ -8,6 +8,7 @@ sed "s/LAST_UPDATED/$LAST_UPDATED/g" index.template > index.html
 
 # initialize and update submodules
 git submodule update --init --recursive
+git submodule update --remote --merge
 
 # create build directory
 rm -rf build
