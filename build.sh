@@ -24,6 +24,9 @@ mkdir -p _staging/water-ontology
 cp -r water-ontology/docs/* _staging/water-ontology/
 cp myst.yml _staging/water-ontology/
 
+# install water-ontology project dependencies (ensures entry points are available)
+uv sync --project water-ontology
+
 # generate template library documentation (sphinx-autodoc-bmotif v0.2.0)
 ROOTDIR=$(pwd)
 uv run --project water-ontology sphinx-autodoc-bmotif generate \
