@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 # update LAST_UPDATED in index.template to current date in format YYYY-MM-DD HH:MM:SS UTC
 # and save it as index.html
@@ -58,6 +58,6 @@ npx rdf add file "http://qudt.org/2.1/vocab/unit" vocab/VOCAB_QUDT-UNITS-ALL.ttl
 npx rdf add file "http://qudt.org/2.1/vocab/quantitykind" vocab/VOCAB_QUDT-QUANTITY-KINDS-ALL.ttl
 npx rdf add file "http://www.w3.org/ns/shacl" vocab/shacl.ttl
 npx rdf add file "https://brickschema.org/schema/Brick/ref" vocab/ref-schema.ttl
-npx rdf make site --output "${ROOTDIR}/build/ontology" --base /ontology
+npx rdf make site --output "${ROOTDIR}/build/ontology" --base /ontology/
 cd "${ROOTDIR}"
 rm -rf /tmp/rdf-toolkit
