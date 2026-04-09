@@ -36,7 +36,7 @@ uv run --project water-ontology --with sphinx-autodoc-bmotif sphinx-autodoc-bmot
 
 # build with BASE_URL so links work at watermetadata.org/docs
 cd _staging/water-ontology
-BASE_URL="/docs" uv run --project ../../water-ontology jupyter-book build --html
+BASE_URL="/docs" uv run --project ../../water-ontology jupyter-book build .
 cd ../..
 
 # move built HTML to build/docs
