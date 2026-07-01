@@ -1,14 +1,22 @@
 #!/bin/bash
 set -ex
 
-# update LAST_UPDATED in index.template to current date in format YYYY-MM-DD HH:MM:SS UTC
-# and save it as index.html
-LAST_UPDATED=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-sed "s/LAST_UPDATED/$LAST_UPDATED/g" index.template > index.html
-
 # initialize and update submodules
 git submodule update --init --recursive
 git submodule update --remote --merge
+
+# build the ontology and publish the generated Turtle file at /water.ttl
+make -C water-ontology libraries/water.ttl
+cp water-ontology/libraries/water.ttl water.ttl
+cp water.ttl watr-ontology-browser/ontologies/water.ttl
+
+# update placeholders in index.template and save it as index.html
+LAST_UPDATED=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+WATER_TTL_LAST_UPDATED=$(date -u -r water.ttl +"%Y-%m-%d %H:%M:%S UTC")
+sed \
+    -e "s/WATER_TTL_UPDATED_AT/$WATER_TTL_LAST_UPDATED/g" \
+    -e "s/LAST_UPDATED/$LAST_UPDATED/g" \
+    index.template > index.html
 
 # create build directory
 rm -rf build
@@ -17,6 +25,7 @@ mkdir -p build
 # copy top-level site files into build/
 cp index.html build/
 cp CNAME build/
+cp water.ttl build/
 
 # build water-ontology jupyter book
 # stage the docs content with our own myst.yml config
