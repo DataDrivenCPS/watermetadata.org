@@ -2,3 +2,5 @@ build/
 _build/
 _staging/
 BuildingMOTIF.log
+/watr.ttl
+/watr-*.ttl
