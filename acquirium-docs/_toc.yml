@@ -1,0 +1,48 @@
+# Table of contents for the Acquirium docs (Diátaxis layout mirroring acquirium/docs)
+format: jb-book
+root: _index.md
+parts:
+- caption: Tutorials
+  chapters:
+  - file: tutorials/_index.md
+    sections:
+    - file: tutorials/getting-started.md
+    - file: tutorials/querying.md
+    - file: tutorials/query-cookbook.md
+    - file: tutorials/data.md
+    - file: tutorials/first-driver.md
+    - file: tutorials/driver-with-a-plant-model.md
+    - file: tutorials/first-app.md
+- caption: How-to guides
+  chapters:
+  - file: how-to/_index.md
+    sections:
+    - file: how-to/load-a-plant-model.md
+    - file: how-to/explore-a-model.md
+    - file: how-to/debug-an-empty-query.md
+    - file: how-to/write-data.md
+    - file: how-to/run-the-server.md
+    - file: how-to/resolve-text.md
+- caption: Reference
+  chapters:
+  - file: reference/_index.md
+    sections:
+    - file: reference/client-api.md
+    - file: reference/drivers.md
+    - file: reference/apps.md
+    - file: reference/server-config.md
+    - file: reference/http-api.md
+    - file: reference/glossary.md
+- caption: Explanation
+  chapters:
+  - file: explanation/_index.md
+    sections:
+    - file: explanation/query-model.md
+    - file: explanation/values.md
+    - file: explanation/units.md
+    - file: explanation/drivers.md
+    - file: explanation/apps.md
+    - file: explanation/stream-lifecycle.md
+    - file: explanation/text-resolution.md
+    - file: explanation/server-internals.md
+    - file: explanation/graph-backend.md

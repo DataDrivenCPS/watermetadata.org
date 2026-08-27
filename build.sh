@@ -62,6 +62,15 @@ cd ../..
 
 # move built HTML to build/docs
 mv _staging/water-ontology/_build/html build/docs
+
+# build acquirium docs (jupyter-book) into build/acquirium
+# content comes from the acquirium submodule; config lives in acquirium-docs/
+rm -rf _staging/acquirium
+mkdir -p _staging/acquirium
+cp -r acquirium/docs/* _staging/acquirium/
+cp acquirium-docs/_config.yml acquirium-docs/_toc.yml _staging/acquirium/
+uv run --project water-ontology jupyter-book build _staging/acquirium
+mv _staging/acquirium/_build/html build/acquirium
 rm -rf _staging
 
 # build watr-ontology-browser and copy to build/ontology
