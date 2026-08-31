@@ -3,7 +3,7 @@ set -ex
 
 # initialize and update submodules
 git submodule update --init --recursive
-git submodule update --remote --merge
+git submodule update --remote
 
 # build the ontology and publish the generated Turtle files:
 #   /watr.ttl            unversioned "latest"
