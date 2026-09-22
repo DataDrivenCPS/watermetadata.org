@@ -20,8 +20,11 @@ parts:
     - file: how-to/load-a-plant-model.md
     - file: how-to/explore-a-model.md
     - file: how-to/debug-an-empty-query.md
+    - file: how-to/calculate-derived-streams.md
+    - file: how-to/check-deploy-apps.md
     - file: how-to/write-data.md
     - file: how-to/run-the-server.md
+    - file: how-to/local-runtime.md
     - file: how-to/resolve-text.md
 - caption: Reference
   chapters:
@@ -44,5 +47,6 @@ parts:
     - file: explanation/apps.md
     - file: explanation/stream-lifecycle.md
     - file: explanation/text-resolution.md
+    - file: explanation/materialization-internals.md
     - file: explanation/server-internals.md
     - file: explanation/graph-backend.md
