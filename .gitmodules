@@ -4,3 +4,6 @@
 [submodule "watr-ontology-browser"]
 	path = watr-ontology-browser
 	url = https://github.com/DataDrivenCPS/watr-ontology-browser.git
+[submodule "acquirium"]
+	path = acquirium
+	url = https://github.com/DataDrivenCPS/acquirium.git
