@@ -64,11 +64,11 @@ cd ../..
 mv _staging/water-ontology/_build/html build/docs
 
 # build acquirium docs (jupyter-book) into build/acquirium
-# content and config (_config.yml, _toc.yml) both come from acquirium/docs in the submodule
+# content and config (_config.yml, _toc.yml, _ext/) all come from acquirium/docs in the submodule.
+# build in place rather than from a copy: docs/_ext/pyproject_version.py reads ../pyproject.toml
+# from the acquirium repo root. --path-output keeps the build output out of the submodule.
 rm -rf _staging/acquirium
-mkdir -p _staging/acquirium
-cp -r acquirium/docs/* _staging/acquirium/
-uv run --project water-ontology jupyter-book build _staging/acquirium
+uv run --project water-ontology jupyter-book build acquirium/docs --path-output _staging/acquirium
 mv _staging/acquirium/_build/html build/acquirium
 rm -rf _staging
 
